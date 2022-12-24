@@ -14,7 +14,7 @@ EXPOSE 80
 
 # Copy file into web server
 COPY index.html /var/www/html/index.html
-RUN   755   /var/www/html/index.html
+RUN  chmod 755   /var/www/html/index.html
 
 # Keep application alive
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
